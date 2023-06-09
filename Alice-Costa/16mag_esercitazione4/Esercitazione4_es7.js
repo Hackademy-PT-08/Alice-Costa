@@ -10,6 +10,7 @@ function numerocasuale ()
 if (isNaN(numero))
 { 
     alert(numero + " non è un numero.");
+    // CORREZIONE: qui puoi aggiungere un return per interrompere l'esecuzione della funzione in caso di errore.
 }
 else if (parseInt(numero) % 2 === 0)
 { 
