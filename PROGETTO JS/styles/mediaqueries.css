@@ -1,0 +1,10 @@
+@media screen and (max-width: 92px) {
+    .main-tile{
+        font-size: 2.2rem;
+      }
+
+    #hero {
+        height: 100vh;
+    }
+
+}

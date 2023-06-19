@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGETTO PRESTO.it</title>
+    
+    <!--Bootstrap CSS-->   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!--Fontawesone-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" />
+    
+    <!--MAIN-->
+    <link href="./styles/main.css" rel="stylesheet">
+    <link href="./styles/mediaqueries.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">PRESTO.it</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ANNUNCI</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CATEGORIE
+          </a>
+          <ul id="dropdownMenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- SOSTITUITO DA metodo JS <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+          </ul> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CHI SIAMO</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">CONTATTI</a>
+        </li>
+        <li class="nav-item me-nd-3">
+            <a class="btn btn-light">CREA ANNUNCIO</a>  
+        </li>
+    </ul>
+          <!--Commento del search> <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> </!-->
+    </div>
+  </div>
+</nav>
+
+<!--HERO-->
+<section id="hero">
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center pt-5">
+            <h1 class="h1 main-title">
+             Scopri le offerte migliori!!!   
+            </h1>
+            </div>
+        </div>
+        <div class="row mt-3 mt-md-5">
+            <div class="col-12 col-md-8 offset-md-2">
+                <p class="h5 text-center">
+                Inseriamo la nostra presentazione del sito
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class= "col-12 mt-2 mt-md-5">
+                <div id="searchbar" class="searchbar shadow-lg">
+                    <div class="card shadow-none">
+                        <div class="card-body">
+                        <form>
+                            <div class="row">    
+                                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                                        <input id="searchInput" type="text" placeholder="Trova gli annunci" class="form-control form-control-lg">
+                                </div>
+                        
+                                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                                        <select id="categorySelect" class="form-control form-control-lg">
+                                            <option value="" selected>Seleziona categoria</option>
+                                        </select>
+                                </div>
+                                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="text" placeholder="Min" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-6">
+                                        <input type="text" 
+                                        placeholder="Max"
+                                        class="form-control form-control-lg">
+                                        </div>    
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 col-md-3 mb-3 mb-md-0 d-grid">                                
+                                <button type="submit" class="btn btn-outline-primary btn-lg">
+                                    Cerca
+                                </button>
+                                </div>
+                            </div>
+                        </form> <!--da completare in PHP-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="blur"></div>
+</section>
+
+<!--CREO CATEGORIE IN HOME SOTTO SEARCH-->
+<section id="categories" class="py-5">
+    <div class="container"></div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="h1 main-title"> 
+                Le nostre <span class="text-secondary">Categorie</span>
+            </p>
+            <div class="row mt-3 mb-5">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <p class="h6">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, nostrum!
+                    </p>
+                </div>
+            </div>  
+        </div>
+     <div id="categoriesRow" class="row">
+        
+     </div>
+    </div>
+</section>
+
+<!--ULTIMI ANNUNCI-->
+<section id="latest" classe="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="h1 main-title"> 
+                Gli ultimi <span class="text-secondary">Annunci</span>
+                </p>
+                <div class="row mt-3 mb-5">
+                     <div class="col-12 col-md-6 offset-md-3">
+                        <p class="h5">
+                        Scopri gli ultimi annunci inseriti
+                        </p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div id="lastAnnouncementsRow" class="row">
+            <!-- PASSATO TRAMITE ANNOUNCEMENT <div class="col-lg-4">
+                <div class="card shadow-lg announcement-card">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    <div class="card-body">
+                        <p class="h2 fw-bold text-secondary">
+                            150.00 €
+                        </p>
+                        <p class="h2">
+                            Titolo annuncio
+                        </p>
+                        <p class="h6">Descrizione dell'annuncio</p>
+                    </div>
+                    <div class="card-footer">
+                       <div class="row">
+                        <div class="col-6">
+                            <p class="mb-0 text-secondary">
+                                <i class="fa-solid fa-tag"></i>
+                                Categoria
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0 text-secondary">
+                                <i class="fa-solid fa-calendar-day"></i>
+                                Data
+                            </p>
+                        </div>
+                       </div> 
+                    </div>
+                    <p class="h5 m-0">
+                        <span class="badge">Vendo</span>
+                    </p>
+                  </div> -->
+            </div>    
+        </div>    
+    </div>    
+</section>
+
+<!--FORM Feedback-->
+<section id="feedback" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 d-none d-lg-block"> <!--d-none (vuol dire non mostrarlo negli schermi piccoli) in d-lg-block mostralo-->
+                <img src="./img/feedback.jpg" class="img-fluid shadow-lg" alt=""/>
+            </div>
+                <div class="col-12 col-lg-6">
+                    <p class="h1 text-black main-title mt-4 mt-md-0">
+                        Lascia il tuo feedback
+                    </p>
+                    <p class="h5 text-black"> Quello che pensi per noi è importante. Aiutaci a migliorare i nostri servizi.                         
+                    </p>                         
+                    <form id="feedbackForm" class="mt-5">
+                        <div class="mb-3 mb-lg-5">
+                            <input id="fullnameInput" type="text" placeholder="Nome e Cognome" class="form-control form-control-lg" required/>
+                        </div>
+                        <div class="mb-3 mb-lg-5">
+                            <input id="emailInput" type="email" placeholder="E-mail" class="form-control form-control-lg" required/>
+                        </div>
+                        <div class="mb-5">
+                            <div class="form-floating">
+                                <textarea id="messageInput" class="form-control form-control-lg" style="height: 100px;" required>
+                                </textarea>
+                                <label for="messageInput">Lascia il tuo commento...</label>
+                              </div>
+                        </div>
+                        <button type="submit" class="btn btn-light btn-lg">
+                            Invia il tuo feedback
+                        </button>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="blur"></div>
+</section>
+
+<!-- Modale conferma invio feedback-->
+<div id="confirmModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title"> Grazie per il tuo feedback!!! </h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label ="close"></button>
+          </div>
+          <d class="modal-body">
+          <p> La tua opinione per noi è importante. Torna a trovarci.</p>
+       </div>
+    </div>
+  </div>
+  </div>
+
+<!--CALL TO ACTION-->
+<section id="calltoaction" classe="py-5">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="h1 main-title">
+                        Presto.it
+                    </p>
+                    <p class="h2 mb-4">
+                        I migliori annunci nella tua città
+                    </p>
+                    <a href="/annunci.html" class="btn btn-lg btn-light">
+                    SCOPRI I NOSTRI ANNUNCI
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="blur"></div>
+</section>
+
+<!--FOOTER-->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <p class="h3 text-info mb-5"> Contattaci</p>
+                <p class="text-light"> Indirizzo - CAP - Città </p>
+                <p class="text-light">+39 000012345</p>
+                <p class="text-light">info@presto.it</p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <p class="h3 text-info mb-5"> Link utili</p>
+                <p><a href="#" class="text-light">Chi siamo</a></p>
+                <p><a href="#" class="text-light">Contattati</a></p>
+                <p><a href="#" class="text-light">FAQ</a></p>
+                </p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <p class="h3 text-info mb-5"> Newsletter</p>
+                <p class="h5 text-light"> Non perdere le novità. Iscriviti alla newsletter</p>
+                <form id="newsletterForm">
+                    <div class="input-group"> <!--Permette di avere il bottone attaccato all'input-->
+                        <input id="neswletterInput" type="email" class="form-control form-control-lg" placeholder="Email" required>
+                        <button class="btn btn-primary" type="submit">ISCRIVITI</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--MODALS-->
+<div id="confirmModal" class="modal" tabinex="-1">
+    <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Avviso di sistema</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>   
+        <div class="modal-body">
+            <p>Grazie per aver inviato il tuo feedback!
+            </p>
+        </div>
+     </div>   
+    </div>
+</div>
+
+<!--Fogli JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+<script src="./js/categories.js"></script>
+<script src="./js/announcements.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>

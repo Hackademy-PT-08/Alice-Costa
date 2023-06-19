@@ -1,0 +1,164 @@
+.main-title{
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+#hero {
+    height: 600px;
+    background-image: url("../img/homeblur.jpg");
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+#hero .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .blur {
+    background-color: rgba(155, 168, 172, 0.35);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-card {
+    border-style: dashed;
+    border-color:#168cBA;
+    transition: all ease .150s;
+    outline: rgba(22, 140, 186, 0.15) solid 4px;
+}
+.category-card:hover {
+    background-color: #168cBA;
+    color:white;
+    cursor: pointer;
+}
+
+.category-card:hover .text-primary {
+    color:white !important;
+}
+
+#calltoaction {
+    background-image: url("../img/homeblur.jpg");
+    background-position: top right;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(155, 168, 172, 0.35);
+    height: 450px;
+    position:relative;
+    outline: rgba(22, 140, 186, 0.15) solid 16px;
+}
+
+#calltoaction .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calltoaction .blur {
+    background-color: rgba(22, 140, 186, 0.15);
+    backdrop-filter: blur(5px);
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+#feedback {
+    background-color: rgba(155, 168, 172, 0.35);
+    position:relative;
+    outline: rgba(22, 140, 186, 0.15) solid 16px;
+    height: 650px;
+}
+
+/* inserire bordi arrotondati*/
+#feedback img {
+    border-radius: 8px;
+    justify-content: center;
+}
+
+/*decidere se gestire
+#feedback .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#feedback .blur {
+    background-color: rgba(22, 140, 186, 0.15);
+    backdrop-filter: blur(5px);
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+*/
+.announcement-card {
+    outline: rgba(22, 140, 186, 0.15) solid 4px;
+    position: relative;
+    transition: all ease .255s;
+}
+
+.announcement-card:hover {
+    outline: rgba(0, 183, 255, 0.35) solid 6px;
+}
+
+.announcement-card .carousel {
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    border-bottom: solid 8px rgba(22, 140, 186, 0.15);
+    max-height: 220px;
+}
+
+.announcement-card .card-footer {
+    border-style: dashed;
+    border-color: #168cba;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.announcement-card .col-6:first-child {
+    border-right: dashed 1px #168cba;
+}
+
+.announcement-card .badge {
+    position:absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+}
